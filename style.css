@@ -1,0 +1,205 @@
+/* Generale */
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: rgba(255, 255, 255, 0.1);
+    padding: px;
+    position: relative;
+    width: 100%;
+    top: 0;
+    transition: background 0.3s ease-in-out;
+}
+
+header:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Navbar */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #7289DA;
+}
+
+/* Hero Section */
+#hero {
+    margin-top: 90px;
+    padding: 50px;
+}
+
+.profile-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    animation: pulse 2s infinite alternate;
+}
+
+/* Animazione di fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1.5s ease-in-out forwards;
+}
+
+/* Discord Button */
+.discord-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #7289DA;
+    text-decoration: none;
+    font-size: 18px;
+    margin-top: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.discord-link img {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px;
+}
+
+.discord-link:hover {
+    transform: scale(1.1);
+}
+
+/* Progetti */
+#projects {
+    padding: 50px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Footer */
+footer {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    margin-top: 20px;
+}
+
+/* ANIMAZIONI */
+
+/* Scrittura animata */
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+#typing-text {
+    font-size: 2em;
+    display: inline-block;
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(20) forwards, blink 0.8s infinite;
+}
+
+/* Effetto blinking cursor */
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+/* Fade in */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Effetto pulsazione */
+@keyframes pulse {
+    from {
+        transform: scale(1);
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+    to {
+        transform: scale(1.05);
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+    }
+}
+
+.line {
+    width: 80%;
+    height: 2px;
+    background: linear-gradient(to right, transparent, white, transparent);
+    margin: 30px auto;
+}
+
+#intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    z-index: 1000;
+    transition: opacity 1s ease-out;
+}
+
+#intro-logo {
+    width: 150px; /* Cambia la dimensione del logo */
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+#intro-text {
+    border-right: 2px solid white;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 0;
+    animation: typing 3s steps(20) forwards, fadeIn 2s ease-in-out;
+}

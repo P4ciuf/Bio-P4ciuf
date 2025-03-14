@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P4ciuf Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="images/favicon.ico">
+</head>
+<body>
+    <div id="intro">
+        <img src="images/profile.png" alt="Logo" id="intro-logo">
+        <h1 id="intro-text"></h1>
+    </div>    
+    <header>
+        <h1 id="typing-text"></h1>
+        <nav>
+            <ul>
+                <li><a href="#about">Chi Sono</a></li>
+                <li><a href="#projects">Progetti</a></li>
+                <li><a href="#contact">Contatti</a></li>
+            </ul>
+        </nav>
+        <div class="line"></div>
+    </header>
+    <section id="hero">
+        <img src="images/profile.png" alt="Profile" class="profile-img">
+        <h2 class="fade-in">Full-Stack Developer & CEO di TechTribe Studio</h2>
+        <p class="fade-in">Sviluppo principalmente siti web, ma continuo a lavorare sulla mia AI "TechTribe Studios AI". Qui puoi trovare i miei 3 progetti principali.</p>
+        <a href="https://discord.gg/Z4cjcrGX8K" class="discord-link">
+            <img src="images/discord-icon.png" alt="Discord"> Discord
+        </a>
+    </section>
+
+    <section id="about">
+        <h2>Chi Sono</h2>
+        <p>Full-Stack Web Developer & Software Programmer. Ultimamente sto lavorando al mio progetto</p>
+        <p>"TechTribe Studio" e alla mia AI personale</p>
+    </section>
+
+    <section id="projects">
+        <h2>I Miei Progetti</h2>
+        <div class="project-card">
+            <h3>TechTribe Studio</h3>
+            <p>TechTribe è un piccolo team di developer, fondato il 29/02/2024 e ancora in sviluppo.</p>
+        </div>
+        <div class="project-card">
+            <h3>Presto in arrivo</h3>
+            <p>Presto in arrivo</p>
+        </div>
+        <div class="project-card">
+        <h3>Presto in arrivo</h3>
+            <p>Presto in arrivo</p>
+        </div>
+    </section>
+    
+        <section id="contact">
+    <h2>Contattami</h2>
+    <p>Puoi trovarmi su 
+        <a href="https://discord.gg/Z4cjcrGX8K" target="_blank" rel="noopener">Discord</a> 
+        o inviarmi un 
+        <a href="https://mail.google.com/mail/?view=cm&to=p4ciuf@gmail.com" target="_blank" rel="noopener">email</a>.
+      </p>      
+    </section>
+    <footer>
+        <p>P4ciuf - Web & Software Developer </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let text = "P4ciuf"; 
+            let introText = document.getElementById("intro-text");
+            let i = 0;
+        
+            function typeWriter() {
+                if (i < text.length) {
+                    introText.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100);
+                } else {
+                    setTimeout(() => {
+                        document.getElementById("intro").style.opacity = "0";
+                        setTimeout(() => {
+                            document.getElementById("intro").style.display = "none";
+                        }, 1000);
+                    }, 2000);
+                }
+            }
+        
+            typeWriter();
+        });
+        </script>        
+</body>
+</html>
