@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
     const textElement = document.getElementById("typing-text");
-    const text = "P4ciuf Portfolio";
+    const text = "Bio P4ciuf";
     let index = 0;
 
     function type() {
