@@ -182,7 +182,7 @@ footer {
 }
 
 #intro-logo {
-    width: 150px; /* Cambia la dimensione del logo */
+    width: 150px; 
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -217,7 +217,6 @@ footer {
     animation: blinkCursor 0.8s infinite;
 }
 
-/* Rimuove il cursore alla fine dell'animazione */
 @keyframes removeCursor {
     to { border-right: none; }
 }
@@ -229,4 +228,12 @@ footer {
 .link {
     text-decoration: none;
     color: white;
+}
+
+.linea-elegante {
+    border: none;
+    height: 2px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, white 50%, rgba(255, 255, 255, 0) 100%);
+    width: 80%;
+    margin: 20px auto;
 }
