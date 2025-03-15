@@ -6,6 +6,31 @@
     <title>P4ciuf Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="images/favicon.ico" href="images/favicon.ico">
+    <style>
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #1e1e1e;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #4a90e2, #0056b3);
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #0056b3;
+        }
+
+        @media screen and (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            ::-webkit-scrollbar {
+                display: none;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="intro">
@@ -26,9 +51,11 @@
     <section id="hero">
         <img src="images/profile.png" alt="Profile" class="profile-img">
         <h2 class="fade-in">P4ciuf</h2>
-        <p class="fade-in">CEO di TechTribe, AI Developer, Software Developer, Learning Engineer & Full-Stack Web Developer.</p>
+        <p class="fade-in">CEO di TechTribe, AI Developer, Software Developer & Learning Engineer.</p>
         </a>
     </section>
+
+    <hr class="linea-elegante1">
 
     <section id="about">
         <h2>Chi Sono</h2>
