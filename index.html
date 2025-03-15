@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>P4ciuf Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="images/favicon.ico">
+    <link rel="icon" type="images/favicon.ico" href="images/favicon.ico">
 </head>
 <body>
     <div id="intro">
@@ -25,10 +25,8 @@
     </header>
     <section id="hero">
         <img src="images/profile.png" alt="Profile" class="profile-img">
-        <h2 class="fade-in">Full-Stack Developer & CEO di TechTribe Studio</h2>
-        <p class="fade-in">Sviluppo principalmente siti web, ma continuo a lavorare sulla mia AI "TechTribe Studios AI". Qui puoi trovare i miei 3 progetti principali.</p>
-        <a href="https://discord.gg/Z4cjcrGX8K" class="discord-link">
-            <img src="images/discord-icon.png" alt="Discord"> Discord
+        <h2 class="fade-in">P4ciuf</h2>
+        <p class="fade-in">CEO di TechTribe, AI Developer, Software Developer & Learning Engineer.</p>
         </a>
     </section>
 
@@ -41,19 +39,15 @@
     <section id="projects">
         <h2>I Miei Progetti</h2>
         <div class="project-card">
-            <h3>TechTribe Studio</h3>
-            <p>TechTribe è un piccolo team di developer, fondato il 29/02/2024 e ancora in sviluppo.</p>
-        </div>
+            <h3><a href="https://p4ciuf.github.io/ThugZone/" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: none;">TechTribe Studio</a></h3>
+            <p>Un team di developer in crescita che crea siti, AI e altri progetti. È presente anche una piccola vendita di hardware usato, ma in ottime condizioni. Se avete bisogno di un software o di un hardware, vi aspettiamo su TechTribe Studio.</p>
+        </div>    
         <div class="project-card">
-            <h3>Presto in arrivo</h3>
-            <p>Presto in arrivo</p>
-        </div>
-        <div class="project-card">
-        <h3>Presto in arrivo</h3>
-            <p>Presto in arrivo</p>
-        </div>
-    </section>
-    
+            <h3><a href="https://p4ciuf.github.io/ThugZone/" target="_blank" rel="noopener noreferrer" style="color: blue; text-decoration: none;">ThugZone</a></h3>
+            <p>Un sito vetrina per ThugZone, semplice, moderno e dal design minimalista. Include un animazione base per un tocco di dinamicità. L'obiettivo è presentare ThugZone in modo chiaro ed efficace, con una navigazione intuitiva e un layout pulito.</p>
+        </div>        
+        
+          
         <section id="contact">
     <h2>Contattami</h2>
     <p>Puoi trovarmi su 
@@ -78,7 +72,7 @@
                 if (i < text.length) {
                     introText.innerHTML += text.charAt(i);
                     i++;
-                    setTimeout(typeWriter, 100);
+                    setTimeout(typeWriter, 5);
                 } else {
                     setTimeout(() => {
                         document.getElementById("intro").style.opacity = "0";
@@ -94,4 +88,3 @@
         </script>        
 </body>
 </html>
-
