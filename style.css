@@ -177,7 +177,7 @@ footer {
     justify-content: center;
     color: white;
     font-size: 2rem;
-    z-index: 1000;
+    z-index: 1;
     transition: opacity 1s ease-out;
 }
 
@@ -192,14 +192,41 @@ footer {
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from { max-width: 0; }
+    to { max-width: 100%; }
+}
+
+@keyframes blinkCursor {
+    50% { opacity: 0; }
 }
 
 #intro-text {
-    border-right: 2px solid white;
     white-space: nowrap;
     overflow: hidden;
-    width: 0;
-    animation: typing 3s steps(20) forwards, fadeIn 2s ease-in-out;
+    max-width: 0;
+    animation: typing 3s steps(30) forwards, fadeIn 2s;
+    caret-color: transparent;
+}
+
+#intro-text::after {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 1em;
+    background: white;
+    animation: blinkCursor 0.8s infinite;
+}
+
+/* Rimuove il cursore alla fine dell'animazione */
+@keyframes removeCursor {
+    to { border-right: none; }
+}
+
+#intro-text.finished {
+    border-right: none;
+}
+
+.link {
+    text-decoration: none;
+    color: white;
 }
